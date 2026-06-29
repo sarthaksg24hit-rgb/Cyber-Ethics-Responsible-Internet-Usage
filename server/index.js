@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 
 const { modules } = require('./data/modules');
 const { authMiddleware, JWT_SECRET } = require('./middleware/auth');
+const fs = require('fs');
+const path = require('path');
 
 // ─── App Setup ───────────────────────────────────────────────────────────────
 
@@ -14,13 +16,30 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// ─── In-Memory Data Store ────────────────────────────────────────────────────
+// ─── File-Based Data Store ───────────────────────────────────────────────────
 
-const users = [];
+const DATA_FILE = path.join(__dirname, 'data', 'users.json');
+let users = [];
 
-// ─── Seed Test User ──────────────────────────────────────────────────────────
+function saveUsers() {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2), 'utf8');
+}
 
-(async function seedUsers() {
+// ─── Load or Seed Users ──────────────────────────────────────────────────────
+
+async function initUsers() {
+  if (fs.existsSync(DATA_FILE)) {
+    try {
+      const data = fs.readFileSync(DATA_FILE, 'utf8');
+      users = JSON.parse(data);
+      console.log(`Loaded ${users.length} users from users.json`);
+      return;
+    } catch (err) {
+      console.error('Error reading users.json, falling back to seed:', err);
+    }
+  }
+
+  // Seed test users if file doesn't exist
   const passwordHash = await bcrypt.hash('Test1234', 10);
   users.push({
     id: 1,
@@ -46,7 +65,11 @@ const users = [];
     isAdmin: true,
   });
   console.log('Admin user created — admin@cyberethics.com / Admin1234');
-})();
+  
+  saveUsers();
+}
+
+initUsers();
 
 // ─── Helper: generate a JWT for a user ───────────────────────────────────────
 
@@ -106,6 +129,7 @@ app.post('/api/auth/signup', async (req, res) => {
       lastLoginAt: new Date().toISOString(),
     };
     users.push(newUser);
+    saveUsers();
 
     const token = generateToken(newUser);
     return res.status(201).json({
@@ -135,6 +159,7 @@ app.post('/api/auth/login', async (req, res) => {
 
     // Track last login
     user.lastLoginAt = new Date().toISOString();
+    saveUsers();
 
     const token = generateToken(user);
     return res.json({
@@ -224,6 +249,7 @@ app.post('/api/quiz/submit', authMiddleware, (req, res) => {
         completedAt: new Date().toISOString(),
         answers: answers,
       };
+      saveUsers();
     }
 
     return res.json({ score: correctCount, total, percentage, results });
