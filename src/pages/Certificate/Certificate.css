@@ -224,27 +224,47 @@
 
 /* Print Styles */
 @media print {
-  .no-print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  .no-print, .navbar {
     display: none !important;
   }
 
   body {
     background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .certificate-page {
     padding: 0;
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .cert-container {
-    max-width: none;
-    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
   }
 
   .certificate-card {
     box-shadow: none;
     border-radius: 0;
+    width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  .cert-shield-icon, .cert-inner, .cert-divider, .cert-scores-summary {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
 
