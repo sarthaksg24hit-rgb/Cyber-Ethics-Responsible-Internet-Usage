@@ -30,22 +30,13 @@ git clone https://github.com/sarthaksg24hit-rgb/Cyber-Ethics-Responsible-Interne
 cd Cyber-Ethics-Responsible-Internet-Usage
 ```
 
-### 2. Start the Backend Server
-Open a terminal and run the following commands to install dependencies and start the Express server:
-```bash
-cd server
-npm install
-node index.js
-```
-*The backend will start running on `http://localhost:3001`*
-
-### 3. Start the Frontend Application
-Open a **new** (second) terminal window, ensure you are in the root folder of the project, and run:
+### 2. Run the Application
+Open a terminal in the project root folder and run:
 ```bash
 npm install
 npm run dev
 ```
-*The frontend will start running on `http://localhost:5173`*
+*This single command will automatically install dependencies and start both the Express backend (port 3001) and Vite frontend (port 5173) simultaneously!*
 
 ---
 
