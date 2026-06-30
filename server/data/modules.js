@@ -1,11 +1,58 @@
 const modules = [
   {
+    id: 7,
+    order: 1,
+    title: "Do's and Don'ts of Cyber/Internet Usage",
+    shortDescription: "Essential cybersecurity rules to protect your digital footprint and avoid academic or financial pitfalls.",
+    icon: "Shield",
+    estimatedMinutes: 10,
+    videoUrl: "https://www.youtube.com/embed/inWWh25S2M0",
+    videoTitle: "Cybersecurity Basics for Students",
+    notes: {
+      introduction: "For college students, mastering cybersecurity is essential to protect your digital footprint and avoid academic or financial pitfalls.",
+      keyPoints: [
+        {
+          heading: "The Do's",
+          content: "• Use Strong, Unique Passwords: Create complex passwords for every account. Consider using a trusted password manager.\n• Enable MFA: Always activate Multi-Factor Authentication (MFA) across your university accounts, emails, and social media platforms.\n• Maintain Strict Privacy Settings: Audit your social media accounts so that your posts, location, and personal details are visible only to close friends.\n• Keep Software Updated: Regularly install the latest updates and security patches for your PC/laptop, web browsers, and antivirus software.\n• Backup Your Data: Keep copies of important academic files on an external hard drive or an encrypted cloud storage service."
+        },
+        {
+          heading: "The Don'ts",
+          content: "• Never Use Public Wi-Fi for Finances: Avoid making online purchases or checking sensitive portals on unsecured public networks.\n• Avoid Clicking Suspicious Links: Do not click on unsolicited links or download email attachments from unknown sources.\n• Don't Share Credentials or OTPs: Never share your One-Time Passwords (OTPs), PINs, or login details with anyone.\n• Don't Over-Share Personal Data: Limit the amount of personal information you post openly on social media to avoid identity theft.\n• Don't Ignore Cyber Ethics: Never share, copy, or distribute copyrighted materials, and refrain from downloading unauthorized pirated programs."
+        }
+      ],
+      summary: "By following these simple Do's and Don'ts, you can significantly reduce your risk of falling victim to cyberattacks and maintain a positive, secure digital presence."
+    },
+    quiz: [
+      {
+        id: 701,
+        type: "true-false",
+        question: "It is safe to check your bank account or make online purchases while connected to a public coffee shop Wi-Fi without a VPN.",
+        options: ["True", "False"],
+        correctAnswer: "False",
+        explanation: "Never use public Wi-Fi for finances. Unsecured public networks make it easy for hackers to intercept your sensitive data."
+      },
+      {
+        id: 702,
+        type: "mcq",
+        question: "Which of the following is a recommended 'Do' for cybersecurity?",
+        options: [
+          "Reusing the same password for all accounts.",
+          "Activating Multi-Factor Authentication (MFA) across your accounts.",
+          "Sharing your OTP with friends if they need it.",
+          "Keeping your social media profiles completely public."
+        ],
+        correctIndex: 1,
+        explanation: "Always activate MFA across your university accounts, emails, and social media platforms to add an extra layer of security."
+      }
+    ]
+  },
+  {
     id: 1,
     title: "Healthy Cyber Use & Online–Offline Balance",
     shortDescription: "Learn to maintain a healthy relationship with technology and balance your digital and real-world life.",
     icon: "Scale",
     estimatedMinutes: 15,
-    order: 1,
+    order: 2,
     notes: {
       introduction: "In today's hyper-connected world, technology is woven into nearly every aspect of our lives — from education and work to socialising and entertainment. While the internet offers incredible opportunities, excessive or unbalanced use can lead to negative consequences for our mental health, relationships, and academic performance.",
       keyPoints: [
@@ -127,7 +174,7 @@ const modules = [
     shortDescription: "Understand how your online actions create a permanent digital footprint and how to manage your digital identity.",
     icon: "Fingerprint",
     estimatedMinutes: 15,
-    order: 2,
+    order: 3,
     notes: {
       introduction: "Every time you go online — posting on social media, signing up for a service, or even just browsing — you leave behind traces of information. This collection of data is your digital footprint, and it forms your online identity. Understanding and managing this footprint is crucial for your personal and professional future.",
       keyPoints: [
@@ -249,7 +296,7 @@ const modules = [
     shortDescription: "Navigate online relationships with respect and learn the unwritten rules of digital communication.",
     icon: "Users",
     estimatedMinutes: 15,
-    order: 3,
+    order: 4,
     notes: {
       introduction: "The internet has transformed how we form and maintain relationships. From group chats and social media to email and video calls, digital communication is central to modern life. However, the lack of face-to-face cues can lead to misunderstandings, conflicts, and even harmful behaviour. Netiquette — network etiquette — provides guidelines for respectful and effective online interaction.",
       keyPoints: [
@@ -371,7 +418,7 @@ const modules = [
     shortDescription: "Recognise cyberbullying in all its forms and learn how to respond, support others, and promote respectful digital spaces.",
     icon: "ShieldAlert",
     estimatedMinutes: 15,
-    order: 4,
+    order: 5,
     notes: {
       introduction: "Cyberbullying is the use of digital devices, platforms, and technologies to harass, threaten, embarrass, or target another person. Unlike traditional bullying, cyberbullying can happen 24/7, reach a wide audience instantly, and leave a permanent digital record. Understanding its forms, impact, and response strategies is essential for creating safe online communities.",
       keyPoints: [
@@ -493,7 +540,7 @@ const modules = [
     shortDescription: "Protect yourself online by understanding passwords, phishing, scams, and essential security practices.",
     icon: "Lock",
     estimatedMinutes: 18,
-    order: 5,
+    order: 6,
     notes: {
       introduction: "In an era of increasing data breaches, identity theft, and sophisticated cyber attacks, understanding online privacy and security is no longer optional — it's essential. This module covers the practical skills you need to protect your personal information, recognise threats, and stay safe online.",
       keyPoints: [
@@ -628,7 +675,7 @@ const modules = [
     shortDescription: "Understand intellectual property rights, plagiarism, fair use, and the ethics of content sharing in the digital age.",
     icon: "Copyright",
     estimatedMinutes: 15,
-    order: 6,
+    order: 7,
     notes: {
       introduction: "The digital age has made it incredibly easy to copy, share, and distribute content — but ease of access doesn't equal permission. Understanding copyright, intellectual property, and the ethics of digital content is essential for academic integrity and responsible digital citizenship. This module explores what's legal, what's ethical, and how to navigate the grey areas.",
       keyPoints: [

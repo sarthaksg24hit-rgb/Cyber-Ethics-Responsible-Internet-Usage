@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import { useAuth } from './AuthContext';
 
 const API_BASE = 'http://localhost:3001/api';
-const TOTAL_MODULES = 6;
+const TOTAL_MODULES = 7;
 const CERT_SCORE = 70;
 
 const ProgressContext = createContext(null);

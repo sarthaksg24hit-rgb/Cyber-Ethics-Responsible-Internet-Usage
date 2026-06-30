@@ -17,7 +17,7 @@ import {
 import './Landing.css';
 
 const stats = [
-  { value: '6', label: 'Modules' },
+  { value: '7', label: 'Modules' },
   { value: '40+', label: 'Quiz Questions' },
   { value: '~90', label: 'Minutes' },
   { value: 'Free', label: 'Certificate' },
@@ -48,6 +48,12 @@ const steps = [
 ];
 
 const topics = [
+  {
+    icon: Shield,
+    color: 'blue',
+    title: "Do's and Don'ts of Cyber Usage",
+    desc: 'Essential rules to protect your digital footprint',
+  },
   {
     icon: Scale,
     color: 'teal',
@@ -180,7 +186,7 @@ export default function Landing() {
             <span className="section-header__tag">Curriculum</span>
             <h2 className="section-header__title">What You'll Learn</h2>
             <p className="section-header__subtitle">
-              Six comprehensive modules covering the most important aspects of cyber ethics
+              Seven comprehensive modules covering the most important aspects of cyber ethics
             </p>
           </div>
 

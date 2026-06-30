@@ -27,6 +27,7 @@ import './Dashboard.css';
 const API_BASE = 'http://localhost:3001/api';
 
 const ICON_MAP = {
+  Shield,
   Scale,
   Fingerprint,
   Users,
@@ -35,7 +36,7 @@ const ICON_MAP = {
   Copyright,
 };
 
-const COLOR_CYCLE = ['blue', 'teal', 'purple', 'pink', 'orange', 'green'];
+const COLOR_CYCLE = ['blue', 'teal', 'purple', 'pink', 'orange', 'green', 'blue'];
 
 function ModuleCard({ module, status, score, onClick }) {
   const IconComponent = ICON_MAP[module.icon] || BookOpen;
@@ -367,7 +368,7 @@ export default function Dashboard() {
                   <p>
                     {cert.eligible
                       ? 'Congratulations! You scored above 70% in all modules. Claim your certificate now!'
-                      : `Score above 70% in all 6 modules to earn your certificate. Progress: ${cert.passedCount}/${cert.total} modules passed.`}
+                      : `Score above 70% in all 7 modules to earn your certificate. Progress: ${cert.passedCount}/${cert.total} modules passed.`}
                   </p>
                   {!cert.eligible && (
                     <div className="cert-module-dots">

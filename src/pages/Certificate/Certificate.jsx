@@ -65,7 +65,7 @@ export default function Certificate() {
                 <p className="cert-preamble">This is to certify that</p>
                 <h2 className="cert-name">{user?.name || 'Student'}</h2>
                 <p className="cert-desc">
-                  has successfully completed all six modules of the
+                  has successfully completed all seven modules of the
                   <strong> Cyber Ethics & Responsible Internet Usage</strong> programme,
                   demonstrating a thorough understanding of digital citizenship,
                   online safety, privacy, and ethical internet use.
@@ -74,7 +74,7 @@ export default function Certificate() {
 
               <div className="cert-stats">
                 <div className="cert-stat">
-                  <span className="cert-stat-value">6/6</span>
+                  <span className="cert-stat-value">7/7</span>
                   <span className="cert-stat-label">Modules Completed</span>
                 </div>
                 <div className="cert-stat">
