@@ -8,19 +8,28 @@ const modules = [
     estimatedMinutes: 10,
     videoUrl: "https://www.youtube.com/embed/inWWh25S2M0",
     videoTitle: "Cybersecurity Basics for Students",
-    notes: {
+        notes: {
       introduction: "For college students, mastering cybersecurity is essential to protect your digital footprint and avoid academic or financial pitfalls.",
       keyPoints: [
         {
-          heading: "The Do's",
-          content: "• Use Strong, Unique Passwords: Create complex passwords for every account. Consider using a trusted password manager.\n• Enable MFA: Always activate Multi-Factor Authentication (MFA) across your university accounts, emails, and social media platforms.\n• Maintain Strict Privacy Settings: Audit your social media accounts so that your posts, location, and personal details are visible only to close friends.\n• Keep Software Updated: Regularly install the latest updates and security patches for your PC/laptop, web browsers, and antivirus software.\n• Backup Your Data: Keep copies of important academic files on an external hard drive or an encrypted cloud storage service."
-        },
-        {
-          heading: "The Don'ts",
-          content: "• Never Use Public Wi-Fi for Finances: Avoid making online purchases or checking sensitive portals on unsecured public networks.\n• Avoid Clicking Suspicious Links: Do not click on unsolicited links or download email attachments from unknown sources.\n• Don't Share Credentials or OTPs: Never share your One-Time Passwords (OTPs), PINs, or login details with anyone.\n• Don't Over-Share Personal Data: Limit the amount of personal information you post openly on social media to avoid identity theft.\n• Don't Ignore Cyber Ethics: Never share, copy, or distribute copyrighted materials, and refrain from downloading unauthorized pirated programs."
+          heading: "Cyber/Internet Usage Rules",
+          table: {
+            headers: ["The Do's", "The Don'ts"],
+            rows: [
+              ["Use Strong, Unique Passwords & MFA", "Never Use Public Wi-Fi for Finances"],
+              ["Maintain Strict Privacy Settings", "Avoid Clicking Suspicious Links"],
+              ["Keep Software Updated", "Don't Share Credentials or OTPs"],
+              ["Backup Your Data", "Don't Over-Share Personal Data"],
+              ["Use Trusted Password Managers", "Don't Ignore Cyber Ethics (e.g. piracy)"]
+            ]
+          }
         }
       ],
-      summary: "By following these simple Do's and Don'ts, you can significantly reduce your risk of falling victim to cyberattacks and maintain a positive, secure digital presence."
+      examples: [
+        "Example 1: You receive an email claiming your tuition payment failed with a link. Instead of clicking the link, you log in to your student portal directly to check your balance.",
+        "Example 2: While at a local coffee shop, you use a VPN before logging into your bank account on their public Wi-Fi.",
+        "Example 3: Setting your social media profiles to 'Friends Only' to ensure future employers or scammers cannot scrape your personal information."
+      ]
     },
     quiz: [
       {

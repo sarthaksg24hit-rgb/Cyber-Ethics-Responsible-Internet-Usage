@@ -122,7 +122,25 @@ export default function TopicDetail() {
                 {module.notes?.keyPoints?.map((point, idx) => (
                   <div key={idx} className="glass-card key-point-card">
                     <h3>{point.heading}</h3>
-                    <p>{point.content}</p>
+                    {point.content && <p>{point.content}</p>}
+                    {point.table && (
+                      <div className="table-responsive">
+                        <table className="notes-table">
+                          <thead>
+                            <tr>
+                              {point.table.headers.map((h, i) => <th key={i}>{h}</th>)}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {point.table.rows.map((row, rIdx) => (
+                              <tr key={rIdx}>
+                                {row.map((cell, cIdx) => <td key={cIdx}>{cell}</td>)}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
