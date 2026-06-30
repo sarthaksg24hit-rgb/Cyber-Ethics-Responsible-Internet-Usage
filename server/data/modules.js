@@ -36,8 +36,7 @@ const modules = [
         id: 701,
         type: "true-false",
         question: "It is safe to check your bank account or make online purchases while connected to a public coffee shop Wi-Fi without a VPN.",
-        options: ["True", "False"],
-        correctAnswer: "False",
+        correctAnswer: false,
         explanation: "Never use public Wi-Fi for finances. Unsecured public networks make it easy for hackers to intercept your sensitive data."
       },
       {
